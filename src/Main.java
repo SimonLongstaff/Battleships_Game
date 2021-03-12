@@ -24,6 +24,16 @@ public class Main {
         GameBoard.placeBattleShip(4);
     }
 
+    /**
+     * Places ships, Renders the game board and start the game loop
+     * @throws IOException
+     */
+    private static void startGame() throws IOException {
+        placeShips();
+        GameBoard.renderBoard();
+        newTarget();
+    }
+
     //<<Gameplay loop>>---------------------------------------------------------------------------------
 
     /**
@@ -33,7 +43,6 @@ public class Main {
      */
     private static void newTarget()
             throws IOException {
-        GameBoard.renderBoard();
         if (hits == 13) {
             endGame();
         }
@@ -64,10 +73,12 @@ public class Main {
                 switch (targetSpot) {
                     case (0):
                         GameBoard.theGameBoard[row][column] = 2;
+                        GameBoard.renderBoard();
                         System.out.println("You Missed!");
                         break;
                     case (1):
                         GameBoard.theGameBoard[row][column] = 3;
+                        GameBoard.renderBoard();
                         System.out.println("You hit!");
                         checkDestroyed(row, column);
                         hits++;
@@ -201,7 +212,6 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        placeShips();
-        newTarget();
+     startGame();
     }
 }

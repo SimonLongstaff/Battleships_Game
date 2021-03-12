@@ -136,7 +136,7 @@ public class GameBoard {
                     break;
                 //Misses
                 case (2):
-                    render.append("◼");
+                    render.append("▧");
                     break;
                 //Hits
                 case (3):

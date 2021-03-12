@@ -132,7 +132,7 @@ public class GameBoard {
             switch (theGameBoard[row][i]) {
                 //Ships <Change to activate cheat mode>
                 case (1):
-                    render.append("▢");
+                    render.append("□");
                     break;
                 //Misses
                 case (2):
@@ -144,7 +144,7 @@ public class GameBoard {
                     break;
                 //Unexplored
                 default:
-                    render.append("▢");
+                    render.append("□");
                     break;
             }
 

@@ -62,18 +62,22 @@ public class Main {
 
                 int targetSpot = GameBoard.theGameBoard[row][column];
                 switch (targetSpot) {
-                    case (0) -> {
+                    case (0):
                         GameBoard.theGameBoard[row][column] = 2;
                         System.out.println("You Missed!");
-                    }
-                    case (1) -> {
+                        break;
+                    case (1):
                         GameBoard.theGameBoard[row][column] = 3;
                         System.out.println("You hit!");
-                        checkDestroyed(row,column);
+                        checkDestroyed(row, column);
                         hits++;
-                    }
-                    case (2) -> System.out.println("You've already checked this spot!");
-                    case (3) -> System.out.println("You've already hit this spot!");
+                        break;
+                    case (2):
+                        System.out.println("You've already checked this spot!");
+                        break;
+                    case (3):
+                        System.out.println("You've already hit this spot!");
+                        break;
                 }
             } else {
                 System.out.println("Please enter correct coordinates!");
@@ -166,19 +170,30 @@ public class Main {
      * @return - column integer, Returns -1 if invalid input
      */
     private static int alphaToInt(String alpha) {
-        return switch (alpha.toLowerCase()) {
-            case ("a") -> 0;
-            case ("b") -> 1;
-            case ("c") -> 2;
-            case ("d") -> 3;
-            case ("e") -> 4;
-            case ("f") -> 5;
-            case ("g") -> 6;
-            case ("h") -> 7;
-            case ("i") -> 8;
-            case ("j") -> 9;
-            default -> -1;
-        };
+        switch (alpha.toLowerCase()) {
+            case ("a"):
+                return 0;
+            case ("b"):
+                return 1;
+            case ("c"):
+                return 2;
+            case ("d"):
+                return 3;
+            case ("e"):
+                return 4;
+            case ("f"):
+                return 5;
+            case ("g"):
+                return 6;
+            case ("h"):
+                return 7;
+            case ("i"):
+                return 8;
+            case ("j"):
+                return 9;
+            default:
+                return -1;
+        }
     }
 
 

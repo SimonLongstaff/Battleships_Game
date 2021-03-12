@@ -11,6 +11,7 @@ public class GameboardRendering {
      * Prints a row of the board depending on the state of the cells in the matrix
      *
      * @param row - the row to be printed
+     * @param theGameBoard - the gameboard matrix
      */
     private static void renderRow(int row, int[][] theGameBoard) {
         StringBuilder render = new StringBuilder("");
@@ -62,6 +63,7 @@ public class GameboardRendering {
 
     /**
      * Renders the game board in the console
+     * @param gameBoard - the gameboard matrix
      */
     public static void renderBoard(int[][] gameBoard) {
         renderTopRow();

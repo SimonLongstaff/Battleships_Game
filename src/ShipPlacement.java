@@ -27,6 +27,7 @@ public class ShipPlacement {
      * If random values give an illegal placement recursively calls itself until placement is not illegal.
      *
      * @param shipSize the size of the ship to be placed
+     * @param theGameBoard - the gameboard matrix
      */
     public static void placeBattleShip(int shipSize, int[][] theGameBoard) {
         int direction = randomInt(0, 1);
@@ -59,6 +60,7 @@ public class ShipPlacement {
      * @param startCol  the starting column of the ship
      * @param direction the orientation of the ship (0 = Vertical, 1 = Horizontal)
      * @param size      the size of the ship
+     * @param GameBoard - the gameboard matrix
      * @return boolean, true = legal placement, false = illegal plcement
      */
     private static boolean checkPlacement(int startRow, int startCol, int direction, int size, int[][] GameBoard) {
@@ -92,6 +94,7 @@ public class ShipPlacement {
      * @param startCol  the starting column of the ship
      * @param direction the orientation of the ship (0 = Vertical, 1 = Horizontal)
      * @param size      the size of the ship
+     * @param gameBoard the gameboard matrix
      */
     private static void makePlacement(int startRow, int startCol, int direction, int size, int[][] gameBoard) {
 

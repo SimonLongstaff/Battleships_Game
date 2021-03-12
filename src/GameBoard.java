@@ -128,20 +128,21 @@ public class GameBoard {
         render.append(String.format("%01d ", row));
 
         for (int i = 0; i < 10; i++) {
-            //Ships <Change to activate cheat mode>
-            //Misses
-            //Hits
-            //Unexplored
+
             switch (theGameBoard[row][i]) {
+                //Ships <Change to activate cheat mode>
                 case (1):
                     render.append("▢");
                     break;
+                //Misses
                 case (2):
-                    render.append("○");
+                    render.append("◼");
                     break;
+                //Hits
                 case (3):
-                    render.append("⬤");
+                    render.append("▣");
                     break;
+                //Unexplored
                 default:
                     render.append("▢");
                     break;

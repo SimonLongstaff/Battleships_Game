@@ -1,3 +1,4 @@
+package simon.battleships;
 /**
  * Gameboard Rendering class for Battleships
  * Renders the game board text based on the gameboard matrix values

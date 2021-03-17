@@ -1,3 +1,4 @@
+package simon.battleships;
 import java.util.Arrays;
 
 /**

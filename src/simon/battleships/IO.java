@@ -1,3 +1,5 @@
+package simon.battleships;
+
 /**
  * Input handling class for Battleships game
  * Checks if inputs are valid and converts them to numeric values

@@ -1,3 +1,5 @@
+package simon.battleships;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -55,7 +57,7 @@ public class Main {
      *
      * @param target - string value from user
      */
-    private static void checkHit(String target) {
+    public static void checkHit(String target) {
 
         String[] split = target.split("");
 

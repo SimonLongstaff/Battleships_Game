@@ -1,3 +1,4 @@
+package simon.battleships;
 /**
  * Ship placement class for Battleships
  * Places the ships onto the gameboard matrix.
@@ -63,7 +64,7 @@ public class ShipPlacement {
      * @param GameBoard - the gameboard matrix
      * @return boolean, true = legal placement, false = illegal plcement
      */
-    private static boolean checkPlacement(int startRow, int startCol, int direction, int size, int[][] GameBoard) {
+    public static boolean checkPlacement(int startRow, int startCol, int direction, int size, int[][] GameBoard) {
         //Vertical
         if (direction == 0) {
             for (int i = 0; i < size; i++) {
@@ -77,7 +78,7 @@ public class ShipPlacement {
         //Horizontal
         if (direction == 1) {
             for (int i = 0; i < size; i++) {
-                if (GameBoard[startRow][startCol = i] == 1) {
+                if (GameBoard[startRow][startCol + i] == 1) {
                     return false;
                 }
             }
@@ -134,7 +135,7 @@ public class ShipPlacement {
      * @param max - maximum integer
      * @return - random int between min and max (inclusive)
      */
-    private static int randomInt(int min, int max) {
+    public static int randomInt(int min, int max) {
         return (int) (Math.random() * (max - min + 1) + min);
     }
 
